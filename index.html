@@ -21,11 +21,12 @@
 <body id="vm" class="" style="">
   <header class="py4 py8-ns" style="background: url('sanfrancisco_designer.jpg'); background-size: cover; background-repeat: no-repeat;">
     <h1 class="center pb2 white">TRACKED</h1>
+    <h2 class="center pb2 white-ns">A SoundCloud playlist.</h2>
   </header>
 
   <section id="examples" class="">
     <div class="bg-black" v-component="plangular" v-src="'http://soundcloud.com/sndsgn/sets/mov'">
-      <div class="p2 py4-ns">
+      <div class="p2">
         <div class="table white">
           <small class="monospace h3 table-cell nowrap center py2">{{ currentTime | prettyTime }} - {{ duration | prettyTime }}</small>
         </div>
@@ -48,7 +49,7 @@
           </div>
         </div>
         <div class="full-width">
-          <div class="px1">
+          <div class="px1 py1">
             <progress class="bg-white" v-on="click: seek($event)" value="{{ currentTime / duration || 0 }}">{{ currentTime / duration }}</progress>
           </div>
         </div>
@@ -70,7 +71,7 @@
   <footer class="px2 py4 bg-black center">
     <div class="py4 px2">
       <a href="https://twitter.com/share"
-        class="twitter-share-button"
+        class="twitter-share-button pl3"
         data-text="A SoundCloud playlist built with html, css and Plangular"
         data-via="sndsgn" data-size="large">Tweet</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
