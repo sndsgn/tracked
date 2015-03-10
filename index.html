@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plangular</title>
+  <meta name="description" content="SoundCloud playlist designed with HTML, CSS & Plangular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="" />
+  <link rel="docs/apple-touch-icon-precomposed" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="docs/autobass.css"/>
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/0.10.6/vue.min.js"></script>
+  <script src="v-plangular.min.js"></script>
+
+  <!--
+  <script src="docs/app.js"></script>
+  -->
+
+</head>
+<body id="vm" class="" style="">
+  <header class="py4" style="background: url('sanfrancisco_designer.jpg'); background-size: cover; background-repeat: no-repeat;">
+    <h1 class="center pb2 white">TRACKED</h1>
+  </header>
+
+  <section id="examples" class="">
+    <div class="bg-black" v-component="plangular" v-src="'http://soundcloud.com/sndsgn/sets/mov'">
+      <div class="p2">
+        <div class="table white">
+          <small class="monospace h3 table-cell nowrap center py2">{{ currentTime | prettyTime }} - {{ duration | prettyTime }}</small>
+        </div>
+        <div class="table center">
+          <div class="table-cell">
+            <button class="button-icon" v-on="click: previous()">
+              <svg v-plangular-icon="'previous'"></svg>
+            </button>
+          </div>
+          <div class="table-cell">
+            <button class="h2 button-icon" v-on="click: playPause(player.playlistIndex)">
+              <svg v-if="player.tracks[player.i] != track || !player.playing" v-plangular-icon="'play'"></svg>
+              <svg v-if="player.tracks[player.i] == track && player.playing" v-plangular-icon="'pause'"></svg>
+            </button>
+          </div>
+          <div class="table-cell">
+            <button class="button-icon" v-on="click: next()">
+              <svg v-plangular-icon="'next'"></svg>
+            </button>
+          </div>
+        </div>
+        <div class="full-width">
+          <div class="px1">
+            <progress class="bg-white" v-on="click: seek($event)" value="{{ currentTime / duration || 0 }}">{{ currentTime / duration }}</progress>
+          </div>
+        </div>
+      </div>
+      <div v-repeat="t : tracks" class="">
+        <a href="#{{ t.title }}" class="block px4 py2 nav-item bg-black"
+          v-on="click: playPause($index)"
+          v-class="player.currentTrack == t ? 'bg-darken-3' : ''">
+          <span class="mr1">{{ $index }}.</span>
+          {{ t.user.username }} - {{ t.title }}
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="px2 py4 bg-black center">
+    <div class="py4 px2">
+      <a href="https://twitter.com/share"
+        class="twitter-share-button"
+        data-text="A SoundCloud playlist built with html, css and Plangular"
+        data-via="sndsgn" data-size="large">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
+    <div class="container">
+      <nav class="">
+        <a href="." class="nav-item py1 mr1">Home</a>
+        <a href="http://www.twitter.com/sndsgns" class="nav-item py1 mr1">Twitter</a>
+        <a href="http://github.com/sndsgn/tracked" class="nav-item py1">Github</a>
+      </nav>
+      <p class="h6 m0 white py3">Designed by <a href="http://github.com/sndsgn" class="nav-item py1 k">sndsgn</a>. Built with <a href="http://github.com/jxnblk/plangular" class="nav-item py1 k">Plangular</a>.</p>
+    </div>
+  </footer>
+
+
+<script> var vm = new Vue({ el: '#vm' }); </script>
+
+</body>
+</html>
