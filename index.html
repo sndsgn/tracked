@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Plangular</title>
+  <title>TRACKED</title>
   <meta name="description" content="SoundCloud playlist designed with HTML, CSS & Plangular">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" href="" />
+  <link rel="icon" href="docs/favicon.ico" />
   <link rel="docs/apple-touch-icon-precomposed" href="apple-touch-icon.png" />
   <link rel="stylesheet" href="docs/autobass.css"/>
   <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-
   <script src="//cdnjs.cloudflare.com/ajax/libs/vue/0.10.6/vue.min.js"></script>
   <script src="v-plangular.min.js"></script>
 
@@ -54,7 +53,7 @@
           </div>
         </div>
       </div>
-      <div class="center">
+      <div class="container">
       <div v-repeat="t : tracks" class="">
         <a href="#{{ t.title }}" class="block px4 py2 nav-item bg-black"
           v-on="click: playPause($index)"
