@@ -230,6 +230,15 @@ small, .h6 {
   .desktop-right {
     float: right; } }
 
+@media (min-width: 64em) {
+  .py8-ns {
+    padding-top: 12rem;
+    padding-bottom: 12rem; }
+  .py4-ns {
+    padding-top: 4rem;
+    padding-bottom: 4rem; }
+}
+
 button, .button {
   font-family: inherit;
   font-weight: 500;

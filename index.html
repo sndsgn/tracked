@@ -20,13 +20,13 @@
 
 </head>
 <body id="vm" class="" style="">
-  <header class="py4" style="background: url('sanfrancisco_designer.jpg'); background-size: cover; background-repeat: no-repeat;">
+  <header class="py4 py8-ns" style="background: url('sanfrancisco_designer.jpg'); background-size: cover; background-repeat: no-repeat;">
     <h1 class="center pb2 white">TRACKED</h1>
   </header>
 
   <section id="examples" class="">
     <div class="bg-black" v-component="plangular" v-src="'http://soundcloud.com/sndsgn/sets/mov'">
-      <div class="p2">
+      <div class="p2 py4-ns">
         <div class="table white">
           <small class="monospace h3 table-cell nowrap center py2">{{ currentTime | prettyTime }} - {{ duration | prettyTime }}</small>
         </div>
@@ -54,6 +54,7 @@
           </div>
         </div>
       </div>
+      <div class="center">
       <div v-repeat="t : tracks" class="">
         <a href="#{{ t.title }}" class="block px4 py2 nav-item bg-black"
           v-on="click: playPause($index)"
@@ -62,6 +63,7 @@
           {{ t.user.username }} - {{ t.title }}
         </a>
       </div>
+    </div>
     </div>
 
   </section>
