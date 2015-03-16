@@ -16,7 +16,7 @@ body {
 
 a {
   font-weight: 500;
-  color: #f52; }
+  color: #2f94cc; }
 
 button {
   font-size: inherit; }
@@ -25,7 +25,10 @@ button {
   text-decoration: none;
   color: #FFF; }
   .nav-item:hover {
-    color: #f52; }
+    color: #2f94cc; }
+  .nav-item:focus {
+    color: #2f94cc; }
+
 
 h1 {
   font-size: 2rem;
@@ -252,10 +255,10 @@ button, .button {
   text-decoration: none;
   padding: 0.25em 1em;
   display: inline-block;
-  color: #f52;
+  color: #2f94cc;
   background-color: transparent;
   border: 0;
-  box-shadow: inset 0 0 0 3px #f52;
+  box-shadow: inset 0 0 0 3px #2f94cc;
   border-radius: 3px;
   -webkit-transition-property: color, background-color, box-shadow, -webkit-transform;
           transition-property: color, background-color, box-shadow, transform;
@@ -265,20 +268,20 @@ button, .button {
           transition-timing-function: ease-out;
   cursor: pointer; }
   button:hover, .button:hover {
-    color: #203036;
-    background-color: #f52;
-    box-shadow: inset 0 0 0 3px #f52, 0 0 0 3px rgba(255, 255, 255, 0.75), 0 0 0 5px rgba(255, 85, 34, 0.5);
+    color: #2f94cc;
+    background-color: #2f94cc;
+    box-shadow: inset 0 0 0 3px #2f94cc, 0 0 0 3px rgba(255, 255, 255, 0.75), 0 0 0 5px rgba(255, 85, 34, 0.5);
     -webkit-transform: scale(1.0625);
         -ms-transform: scale(1.0625);
             transform: scale(1.0625); }
   button:focus, .button:focus {
     outline: 0;
-    box-shadow: inset 0 0 0 3px #f52, 0 0 0 3px white, 0 0 0 5px rgba(255, 85, 34, 0.5); }
+    box-shadow: inset 0 0 0 3px #2f94cc, 0 0 0 3px white, 0 0 0 5px rgba(255, 85, 34, 0.5); }
   button:active, .button:active {
     -webkit-transform: scale(0.96875);
         -ms-transform: scale(0.96875);
             transform: scale(0.96875);
-    box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #f52; }
+    box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px white, 0 0 0 5px #2f94cc; }
 
 .button-wide {
   padding: 0.25em 3em; }
@@ -295,7 +298,7 @@ button, .button {
     color: #fff;
     background-color: #000; }
   .button-icon:hover {
-    color: #f52;
+    color: #2f94cc;
     background-color: #000;
     box-shadow: none; }
   .button-icon:focus {
@@ -315,9 +318,9 @@ progress {
     background-color: rgba(0, 0, 0, 0.125); }
   progress::-webkit-progress-value {
     -webkit-appearance: none;
-    background-color: #f52; }
+    background-color: #2f94cc; }
   progress::-moz-progress-bar {
-    background-color: #f52; }
+    background-color: #2f94cc; }
 
 .plangular-icon {
   width: 1em;
@@ -342,11 +345,14 @@ progress {
 .white {
   color: #fff; }
 
+.dark-blue {
+  color: #2f94cc; }
+
 .orange {
-  color: #f52;}
+  color: #2f94cc;}
 
 .red {
-  color: #f52; }
+  color: #2f94cc; }
 
 .dark-gray {
   color: #203036; }
@@ -382,11 +388,11 @@ progress {
   background: rgba(255, 85, 34, 0.25); }
 
 .theme-dark-red {
-  color: #f52;
+  color: #2f94cc;
   background-color: #203036; }
   .theme-dark-red .button {
-    color: #f52;
-    box-shadow: inset 0 0 0 3px #f52;
+    color: #2f94cc;
+    box-shadow: inset 0 0 0 3px #2f94cc;
     -webkit-transition-property: color, background-color, box-shadow, -webkit-transform;
             transition-property: color, background-color, box-shadow, transform;
     -webkit-transition-duration: 0.1s;
@@ -397,20 +403,20 @@ progress {
     .theme-dark-red .button:hover {
       color: #203036;
       background-color: rgba(255, 85, 34, 0.875);
-      box-shadow: inset 0 0 0 3px #f52, 0 0 0 3px #203036, 0 0 0 5px rgba(255, 85, 34, 0.5);
+      box-shadow: inset 0 0 0 3px #2f94cc, 0 0 0 3px #203036, 0 0 0 5px rgba(255, 85, 34, 0.5);
       -webkit-transform: scale(1.0625);
           -ms-transform: scale(1.0625);
               transform: scale(1.0625); }
     .theme-dark-red .button:focus {
       outline: 0;
-      box-shadow: inset 0 0 0 3px #f52, 0 0 0 3px #203036, 0 0 0 5px rgba(255, 85, 34, 0.5); }
+      box-shadow: inset 0 0 0 3px #2f94cc, 0 0 0 3px #203036, 0 0 0 5px rgba(255, 85, 34, 0.5); }
     .theme-dark-red .button:active {
       -webkit-transform: scale(0.96875);
           -ms-transform: scale(0.96875);
               transform: scale(0.96875);
-      box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px #203036, 0 0 0 5px #f52; }
+      box-shadow: inset 0 2px 6px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px #203036, 0 0 0 5px #2f94cc; }
   .theme-dark-red .nav-item {
-    color: #f52; }
+    color: #2f94cc; }
     .theme-dark-red .nav-item:hover {
       background-color: rgba(0, 0, 0, 0.0625); }
   .theme-dark-red input::-moz-selection {

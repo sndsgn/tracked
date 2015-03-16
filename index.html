@@ -58,7 +58,7 @@
       <div v-repeat="t : tracks" class="">
         <a href="#{{ t.title }}" class="block px4 py2 nav-item bg-black"
           v-on="click: playPause($index)"
-          v-class="player.currentTrack == t ? 'bg-darken-3' : ''">
+          v-class="player.currentTrack == t ? 'dark-blue' : ''">
           <span class="mr1">{{ $index }}.</span>
           {{ t.user.username }} - {{ t.title }}
         </a>
