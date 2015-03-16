@@ -29,7 +29,6 @@ button {
   .nav-item:focus {
     color: #2f94cc; }
 
-
 h1 {
   font-size: 2rem;
   font-weight: 500;
@@ -349,10 +348,10 @@ progress {
   color: #2f94cc; }
 
 .orange {
-  color: #2f94cc;}
+  color: #f52;}
 
 .red {
-  color: #2f94cc; }
+  color: #FF0000; }
 
 .dark-gray {
   color: #203036; }
