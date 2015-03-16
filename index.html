@@ -37,7 +37,7 @@
             </button>
           </div>
           <div class="table-cell">
-            <button class="h2 button-icon" v-on="click: playpause(player.playlistindex)">
+            <button class="h2 button-icon" v-on="click: playPause(player.playlistIndex)">
               <svg v-if="player.tracks[player.i] != track || !player.playing" v-plangular-icon="'play'"></svg>
               <svg v-if="player.tracks[player.i] == track && player.playing" v-plangular-icon="'pause'"></svg>
             </button>
