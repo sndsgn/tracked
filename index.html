@@ -28,7 +28,7 @@
     <div class="bg-black" v-component="plangular" v-src="'http://soundcloud.com/sndsgn/sets/mov'">
       <div class="p2">
         <div class="table white">
-          <small class="monospace h3 table-cell nowrap center py2">{{ currenttime | prettytime }} - {{ duration | prettytime }}</small>
+          <small class="monospace h3 table-cell nowrap center py2">{{ currentTime | prettyTime }} - {{ duration | prettyTime }}</small>
         </div>
         <div class="table center">
           <div class="table-cell">
@@ -50,7 +50,7 @@
         </div>
         <div class="full-width">
           <div class="px1 py1">
-            <progress class="bg-white" v-on="click: seek($event)" value="{{ currenttime / duration || 0 }}">{{ currenttime / duration }}</progress>
+            <progress class="bg-white" v-on="click: seek($event)" value="{{ currentTime / duration || 0 }}">{{ currentTime / duration }}</progress>
           </div>
         </div>
       </div>
