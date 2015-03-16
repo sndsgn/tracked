@@ -269,13 +269,13 @@ button, .button {
   button:hover, .button:hover {
     color: #2f94cc;
     background-color: #2f94cc;
-    box-shadow: inset 0 0 0 3px #2f94cc, 0 0 0 3px rgba(255, 255, 255, 0.75), 0 0 0 5px rgba(255, 85, 34, 0.5);
+    box-shadow: inset 0 0 0 3px #2f94cc, 0 0 0 3px #2f94cc, 0 0 0 5px #2f94cc;
     -webkit-transform: scale(1.0625);
         -ms-transform: scale(1.0625);
             transform: scale(1.0625); }
   button:focus, .button:focus {
     outline: 0;
-    box-shadow: inset 0 0 0 3px #2f94cc, 0 0 0 3px white, 0 0 0 5px rgba(255, 85, 34, 0.5); }
+    box-shadow: inset 0 0 0 3px #2f94cc, 0 0 0 3px white, 0 0 0 5px #2f94cc; }
   button:active, .button:active {
     -webkit-transform: scale(0.96875);
         -ms-transform: scale(0.96875);
@@ -301,7 +301,7 @@ button, .button {
     background-color: #000;
     box-shadow: none; }
   .button-icon:focus {
-    box-shadow: 0 0 0 3px rgba(255, 85, 34, 0.5); }
+    box-shadow: 0 0 0 3px #2f94cc; }
 
 progress {
   display: block;
@@ -369,7 +369,7 @@ progress {
   background-color: rgba(0, 0, 0, 0.125); }
 
 .bg-darken-3 {
-  background-color: rgba(0, 0, 0, 0.25); }
+  background-color: #2f94cc; }
 
 .bg-red-alpha {
   background-color: rgba(255, 85, 34, 0.125); }
@@ -381,10 +381,10 @@ progress {
   box-shadow: inset 0 0 0 2px; }
 
 ::-moz-selection {
-  background: rgba(255, 85, 34, 0.25); }
+  background: #2f94cc; }
 
 ::selection {
-  background: rgba(255, 85, 34, 0.25); }
+  background: #2f94cc; }
 
 .theme-dark-red {
   color: #2f94cc;
@@ -402,13 +402,13 @@ progress {
     .theme-dark-red .button:hover {
       color: #203036;
       background-color: rgba(255, 85, 34, 0.875);
-      box-shadow: inset 0 0 0 3px #2f94cc, 0 0 0 3px #203036, 0 0 0 5px rgba(255, 85, 34, 0.5);
+      box-shadow: inset 0 0 0 3px #2f94cc, 0 0 0 3px #203036, 0 0 0 5px #2f94cc;
       -webkit-transform: scale(1.0625);
           -ms-transform: scale(1.0625);
               transform: scale(1.0625); }
     .theme-dark-red .button:focus {
       outline: 0;
-      box-shadow: inset 0 0 0 3px #2f94cc, 0 0 0 3px #203036, 0 0 0 5px rgba(255, 85, 34, 0.5); }
+      box-shadow: inset 0 0 0 3px #2f94cc, 0 0 0 3px #203036, 0 0 0 5px #2f94cc; }
     .theme-dark-red .button:active {
       -webkit-transform: scale(0.96875);
           -ms-transform: scale(0.96875);
