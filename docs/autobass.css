@@ -25,7 +25,9 @@ button {
   text-decoration: none;
   color: #FFF; }
   .nav-item:hover {
-    color: #f52; }
+    color: #2f94cc; }
+  .nav-item:focus {
+    color: #2f94cc; }
 
 h1 {
   font-size: 2rem;
@@ -265,8 +267,8 @@ button, .button {
           transition-timing-function: ease-out;
   cursor: pointer; }
   button:hover, .button:hover {
-    color: #203036;
-    background-color: #f52;
+    color: #2f94cc;
+    background-color: #2f94cc;
     box-shadow: inset 0 0 0 3px #f52, 0 0 0 3px rgba(255, 255, 255, 0.75), 0 0 0 5px rgba(255, 85, 34, 0.5);
     -webkit-transform: scale(1.0625);
         -ms-transform: scale(1.0625);
@@ -295,7 +297,7 @@ button, .button {
     color: #fff;
     background-color: #000; }
   .button-icon:hover {
-    color: #f52;
+    color: #2f94cc;
     background-color: #000;
     box-shadow: none; }
   .button-icon:focus {
@@ -315,9 +317,9 @@ progress {
     background-color: rgba(0, 0, 0, 0.125); }
   progress::-webkit-progress-value {
     -webkit-appearance: none;
-    background-color: #f52; }
+    background-color: #2f94cc; }
   progress::-moz-progress-bar {
-    background-color: #f52; }
+    background-color: #2f94cc; }
 
 .plangular-icon {
   width: 1em;
@@ -342,6 +344,9 @@ progress {
 .white {
   color: #fff; }
 
+.dark-blue {
+  color: #2f94cc; }
+
 .orange {
   color: #f52;}
 
@@ -364,7 +369,7 @@ progress {
   background-color: rgba(0, 0, 0, 0.125); }
 
 .bg-darken-3 {
-  background-color: rgba(0, 0, 0, 0.25); }
+  background-color: #2f94cc; }
 
 .bg-red-alpha {
   background-color: rgba(255, 85, 34, 0.125); }

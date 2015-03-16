@@ -28,7 +28,7 @@
     <div class="bg-black" v-component="plangular" v-src="'http://soundcloud.com/sndsgn/sets/mov'">
       <div class="p2">
         <div class="table white">
-          <small class="monospace h3 table-cell nowrap center py2">{{ currentTime | prettyTime }} - {{ duration | prettyTime }}</small>
+          <small class="monospace h3 table-cell nowrap center py2">{{ currenttime | prettytime }} - {{ duration | prettytime }}</small>
         </div>
         <div class="table center">
           <div class="table-cell">
@@ -37,7 +37,7 @@
             </button>
           </div>
           <div class="table-cell">
-            <button class="h2 button-icon" v-on="click: playPause(player.playlistIndex)">
+            <button class="h2 button-icon" v-on="click: playpause(player.playlistindex)">
               <svg v-if="player.tracks[player.i] != track || !player.playing" v-plangular-icon="'play'"></svg>
               <svg v-if="player.tracks[player.i] == track && player.playing" v-plangular-icon="'pause'"></svg>
             </button>
@@ -50,7 +50,7 @@
         </div>
         <div class="full-width">
           <div class="px1 py1">
-            <progress class="bg-white" v-on="click: seek($event)" value="{{ currentTime / duration || 0 }}">{{ currentTime / duration }}</progress>
+            <progress class="bg-white" v-on="click: seek($event)" value="{{ currenttime / duration || 0 }}">{{ currenttime / duration }}</progress>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
       <div v-repeat="t : tracks" class="">
         <a href="#{{ t.title }}" class="block px4 py2 nav-item bg-black"
           v-on="click: playPause($index)"
-          v-class="player.currentTrack == t ? 'bg-darken-3' : ''">
+          v-class="player.currentTrack == t ? 'dark-blue' : ''">
           <span class="mr1">{{ $index }}.</span>
           {{ t.user.username }} - {{ t.title }}
         </a>
