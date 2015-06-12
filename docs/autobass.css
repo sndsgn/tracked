@@ -241,7 +241,7 @@ small, .h6 {
     font-size: 1rem;}
 }
 
-@media (min-width: 80em) {
+@media (min-width: 85em) {
   .white-l {
     color: white}
 }
