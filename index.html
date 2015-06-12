@@ -19,44 +19,44 @@
 
 </head>
 <body id="vm" class="" style="">
-  <header class="py4 py8-ns" style="background: url('sanfrancisco_designer.jpg'); background-size: cover; background-repeat: no-repeat;">
+  <header class="py4 py12-m" style="background: url('sanfrancisco_designer.jpg'); background-size: cover; background-repeat: no-repeat;">
     <h1 class="center pb2 white">TRACKED</h1>
-    <h2 class="center pb2 white-ns">A SoundCloud playlist.</h2>
+    <h2 class="center pb2 white-l px2 f2-m">A SoundCloud playlist.</h2>
   </header>
 
   <section id="examples" class="">
-    <div class="bg-black" v-component="plangular" v-src="'http://soundcloud.com/sndsgn/sets/mov'">
+    <div class="bg-black" v-component="plangular" v-src="'https://soundcloud.com/sndsgn/sets/mov'">
       <div class="p2">
         <div class="table white">
-          <small class="monospace h3 table-cell nowrap center py2">{{ currentTime | prettyTime }} - {{ duration | prettyTime }}</small>
+          <small class="monospace table-cell nowrap center py2 h3 f1plus-m">{{ currentTime | prettyTime }} - {{ duration | prettyTime }}</small>
         </div>
-        <div class="table center">
+        <div class="table center h3 f1plus-m">
           <div class="table-cell">
             <button class="button-icon" v-on="click: previous()">
               <svg v-plangular-icon="'previous'"></svg>
             </button>
           </div>
           <div class="table-cell">
-            <button class="h2 button-icon" v-on="click: playPause(player.playlistIndex)">
+            <button class="h2 f1plus-m button-icon" v-on="click: playPause(player.playlistIndex)">
               <svg v-if="player.tracks[player.i] != track || !player.playing" v-plangular-icon="'play'"></svg>
               <svg v-if="player.tracks[player.i] == track && player.playing" v-plangular-icon="'pause'"></svg>
             </button>
           </div>
-          <div class="table-cell">
+          <div class="table-cell h3 f1plus-m">
             <button class="button-icon" v-on="click: next()">
               <svg v-plangular-icon="'next'"></svg>
             </button>
           </div>
         </div>
-        <div class="full-width">
+        <div class="full-width h3 f1plus-m">
           <div class="px1 py1">
             <progress class="bg-white" v-on="click: seek($event)" value="{{ currentTime / duration || 0 }}">{{ currentTime / duration }}</progress>
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container ">
       <div v-repeat="t : tracks" class="">
-        <a href="#{{ t.title }}" class="block px4 py2 nav-item bg-black"
+        <a href="#{{ t.title }}" class="h3 block px1-xl px4 py2 nav-item bg-black"
           v-on="click: playPause($index)"
           v-class="player.currentTrack == t ? 'dark-blue' : ''">
           <span class="mr1">{{ $index }}.</span>
@@ -65,7 +65,6 @@
       </div>
     </div>
     </div>
-
   </section>
 
   <footer class="px2 py4 bg-black center">
