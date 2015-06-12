@@ -227,13 +227,40 @@ small, .h6 {
 .oh {
   overflow: hidden; }
 
+@media (min-width: 54.5em) {
+  .white-m {
+    color: white;}
+  .py12-m {
+    padding-top: 12rem;
+    padding-bottom: 12rem;}
+  .f2-m {
+    font-size: 2rem;}
+  .f1plus-m {
+    font-size: 1.5rem;}
+  .f1-m {
+    font-size: 1rem;}
+}
+
+@media (min-width: 85em) {
+  .white-l {
+    color: white}
+}
+
+@media (min-width: 88em) {
+  .px1-xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 @media (min-width: 40em) {
   .desktop-block {
     display: block; }
   .desktop-left {
     float: left; }
   .desktop-right {
-    float: right; } }
+    float: right; }
+}
 
 @media (min-width: 64em) {
   .py8-ns {
