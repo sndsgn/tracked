@@ -4,7 +4,7 @@ SoundCloud playlist made with Plangular.
 
 http://jxnblk.github.io/plangular
 
-[Examples](http://jxnblk.github.io/plangular/docs/vuejs)
+[Examples](http://jxnblk.com/plangular/#examples)
 
 ---
 
