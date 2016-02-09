@@ -26,7 +26,7 @@
 
   <section id="examples" class="">
     <div class="bg-black" v-component="plangular" v-src="'https://soundcloud.com/sndsgn/sets/mov'">
-      <div class="p2">
+      <div class="py3">
         <div class="table white">
           <small class="monospace table-cell nowrap center py2 h3 f1plus-m">{{ currentTime | prettyTime }} - {{ duration | prettyTime }}</small>
         </div>
@@ -49,13 +49,13 @@
           </div>
         </div>
         <div class="full-width h3 f1plus-m">
-          <div class="px1 py1">
-            <progress class="bg-white" v-on="click: seek($event)" value="{{ currentTime / duration || 0 }}">{{ currentTime / duration }}</progress>
+          <div class="py1">
+            <progress class="bg-white full-width" v-on="click: seek($event)" value="{{ currentTime / duration || 0 }}">{{ currentTime / duration }}</progress>
           </div>
         </div>
       </div>
-      <div class="container ">
-      <div v-repeat="t : tracks" class="">
+      <div class="container center">
+      <div v-repeat="t : tracks" class="left">
         <a href="#{{ t.title }}" class="h3 block px1-xl px4 py2 nav-item bg-black"
           v-on="click: playPause($index)"
           v-class="player.currentTrack == t ? 'dark-blue' : ''">
